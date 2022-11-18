@@ -10,31 +10,32 @@
 		<script>
 		var arr1 = [];
 		
-		//항목 추가(맨 끝에 추가)
+		//1.항목 추가(맨 끝에 추가)
 		arr1.push("fall");
 		arr1.push("winter");
 		console.log(arr1);
 		
-		//항목 삽입
+		//2.항목 삽입
 		const arr2 = ["Banana", "Orange", "Apple", "Mango"];
 		arr2.splice(2,0,"melon");
 		console.log(arr2);
 	
-		//항목 삭제
+		//3.항목 삭제
 		const arr3 = ["Banana", "Orange", "Apple", "Mango"];
 		arr3.splice(2,1);
 		console.log(arr3);
 	
-		//부분 삭제
+		//4.부분 삭제
 		const arr4 = ["Banana", "Orange", "Apple", "Mango"];
 		arr4.splice(1,2);
 		console.log(arr4);
 		
-		//항목 정렬
+		//5.항목 정렬
+		//5-1. 오름차순
 		const arr5 = ["Banana", "Orange", "Apple", "Mango"];
 		arr5.sort();
 		console.log(arr5);
-		//항상 sort를 하고 나서, reverse를 해야 함
+		//5-2.내림차순 - 항상 sort를 하고 나서, reverse를 해야 함
 		arr5.reverse();
 		console.log(arr5);
 		
