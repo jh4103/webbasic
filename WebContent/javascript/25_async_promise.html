@@ -13,7 +13,7 @@
 				let promise = new Promise(function(resolve, reject) {
 					//실제 작업 내용 정의 (시간을 필요로 하는 작업)
 					//...
-					let result = false;
+					let result = true;
 					if(result){
 						resolve("success");
 					} else{
@@ -25,24 +25,23 @@
 				return promise;
 			}
 			//Button의 Click 이벤트가 발생했을 때 실행하는 함수
-			async function fun1(){
+			function fun1(){
 				console.log("이벤트 처리 시작");
 				
-				try{
-					var result = await.work();
-					console.log(result);
-				} catch(err){
-					console.log(err);
-				}
+				//Promise 실행 방법1
+				/* work().then(
+					function(value) {console.log(value + ": 네트워크 통신 완료")},
+					function(value) {console.log(value + ": 네트워크 통신 실패")}
+				);
+				 */
 				console.log("이벤트 처리 종료");
 			
-			}
+				//Promise 실행 방법2
+				work()
+					.then(function(value) {console.log(value + ": 네트워크 통신 완료"); })
+					.catch(function(value) {console.log(value + ": 네트워크 통신 실패"); })
+					.finally(function() {console.log("마무리"); });
 			
-			function fun2(){
-				console.log("이벤트 처리 시작");
-				fun1();
-				
-				console.log("이벤트 처리 종료");
 			}
 			
 			
