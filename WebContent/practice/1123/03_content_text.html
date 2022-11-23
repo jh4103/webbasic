@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			function fun1(){
+				var pContent = $("#div>p").text();
+				console.log(pContent);
+			}
+			function fun2(){
+				var userId = $("#userId").val();
+				console.log("userId: "+ userId);
+			}
+			function fun3(){
+				var hobby = $(".class:checked").each(function(){
+					console.log($(this));
+					console.log($(this).val());
+				});
+			}
+			
+		</script>
+	
+	
+	</head>
+	<body>
+		<div class="card">
+	        <div class="card-header">
+	        	Content Text Self Review
+	        </div>
+	
+	        <div class="card-body">
+	        	<button onclick="fun1()" class="btn btn-info btn-sm">버튼1</button>
+	        	<button onclick="fun2()" class="btn btn-warning btn-sm">userId알아내기</button>
+	        	<button onclick="fun3()" class="btn btn-success btn-sm">hobby알아내기</button>
+	        	<div id="div1">
+	        		<p>This is sentence</p>
+	        		<hr/>
+	        		아이디: <input type="text" id="userId" name="userID"/><br/>
+	        		취미: 
+				        <input class="1" type="checkbox" name="hobby" value="movie"/>영화
+				        <input class="1" type="checkbox" name="hobby" value="music"/>음악
+				        <input class="1" type="checkbox" name="hobby" value="game"/>게임<br/>
+	        		
+	        		직업: <input type="radio" name="job" value ="student"/>학생
+	        			 <input type="radio" name="job" value ="developer"/>개발자
+	        			 <input type="radio" name="job" value ="designer"/>디자이너<br/>
+	        		<hr/>
+	        		<img src="/webbasic/images/photo1.jpg" width="100" height="100"/>
+	        		<img src="/webbasic/images/photo2.jpg" width="100" height="100"/>
+	        		<img src="/webbasic/images/photo3.jpg" width="100" height="100"/>
+	        	</div>
+	        </div>	
+	    </div>
+	</body>
+</html>
