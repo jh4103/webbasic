@@ -17,7 +17,7 @@
 				console.log("userId: "+ userId);
 			}
 			function fun3(){
-				var hobby = $(".class:checked").each(function(){
+				var hobby = $("input[name=hobby]:checked").each(function(){
 					console.log($(this));
 					console.log($(this).val());
 				});
@@ -42,9 +42,9 @@
 	        		<hr/>
 	        		아이디: <input type="text" id="userId" name="userID"/><br/>
 	        		취미: 
-				        <input class="1" type="checkbox" name="hobby" value="movie"/>영화
-				        <input class="1" type="checkbox" name="hobby" value="music"/>음악
-				        <input class="1" type="checkbox" name="hobby" value="game"/>게임<br/>
+				        <input type="checkbox" name="hobby" value="movie"/>영화
+				        <input type="checkbox" name="hobby" value="music"/>음악
+				        <input type="checkbox" name="hobby" value="game"/>게임<br/>
 	        		
 	        		직업: <input type="radio" name="job" value ="student"/>학생
 	        			 <input type="radio" name="job" value ="developer"/>개발자
